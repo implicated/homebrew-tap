@@ -25,6 +25,10 @@ cask "chromium" do
     EOS
   end
 
+  postflight do
+    system "xattr", "-dr", "com.apple.quarantine", appdir/"qutebrowser.app"
+  end
+
   zap trash: [
     "~/Library/Application Support/Chromium",
     "~/Library/Application Support/CrashReporter/Chromium_*.plist",
