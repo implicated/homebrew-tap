@@ -11,7 +11,7 @@ cask "qutebrowser" do
   desc "Keyboard-driven, vim-like browser based on PyQt5"
   homepage "https://www.qutebrowser.org/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/qutebrowser.wrapper.sh"
